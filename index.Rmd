@@ -178,9 +178,7 @@ Estupro
 	objeto <- seguranca_v02 %>% 
   group_by(MES) %>%
   summarise(Ocorrencias = sum(Estupro)) %>%
-  ggplot(aes(x=MES,y=Ocorrencias,text = paste(
-                 'MES', as.Date(MES),
-                 'Obs', Ocorrencias))) +
+  ggplot(aes(x=MES,y=Ocorrencias)) +
   geom_line(color="#fac113",size=2) +
   labs(
     title = "",
